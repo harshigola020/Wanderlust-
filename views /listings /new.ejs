@@ -1,0 +1,53 @@
+<% layout("/layouts/boilerplate")-%>
+    <div class="row">
+        <div class="col-8 offset-2">
+            <br/>
+            <h2>Create a new Listing</h2>
+            <form method="POST" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label class="form-label" for="title">Title</label>
+                    <input name="listing[title]" placeholder="Add a catchy title" type="text" id="title" class="form-control" required/>
+                    <div class="valid-feedback">Title looks good</div>
+                    <div class="invalid-feedback">Title should be valid</div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="description">Description</label>
+                    <textarea name="listing[description]" placeholder="Enter description" id="description" class="form-control" required></textarea>
+                    <div class="invalid-feedback">Please write a short description</div>
+                </div>
+            
+
+                 <div class="mb-3">
+                    <label class="form-label" for="image">Upload Listing Image</label>
+                    <input name="listing[image]" type="file" class="form-control" id="image" accept=".jpg,.jpeg,.png" required/>      
+                    <div class="invalid-feedback">Should be a valid url</div>
+                </div>
+            
+                <div class="row">
+                    <div class="mb-3 col-md-4">
+                        <label class="form-label" for="price">Price</label>
+                        <input name="listing[price]" placeholder="1500" type="number" class="form-control" id="price" required/>
+                        <div class="invalid-feedback">Price should be valid</div>
+                    </div>
+                
+                    <div class="mb-3 col-md-8">
+                        <label class="form-label" for="country">Country</label>
+                        <input name="listing[country]" placeholder="India" type="text" class="form-control" id="country" required/>
+                        <div class="invalid-feedback">Country name should be valid</div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="location">Location</label>
+                    <input name="listing[location]" placeholder="Jaipur,Rajasthan" type="text" class="form-control" id="location" required/>
+                    <div class="invalid-feedback">Location should be valid</div>
+                </div>
+
+                <br/>
+                <button type="submit" class="btn btn-dark save-btn" >Add</button>
+                <br/>
+                <br/>
+            </form>
+        </div>
+    </div>
