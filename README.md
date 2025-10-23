@@ -1,2 +1,0 @@
-# Wanderlust-
-Web Dev Project
